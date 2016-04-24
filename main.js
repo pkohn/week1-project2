@@ -180,11 +180,28 @@ var array4 = [
 
 console.log("Question 18");
 
+for (var i = 0; i < array4.length;) {
+    var person = array4[i];
+    if (person === 'Sparky' || person === 'White') {
+        array4.splice(i,1);
+    } else {
+        i++;
+    }
+
+	console.log(array4);
+}
+
+console.log(array4);
+
+
 // BONUS 1: Try to arrange the following items from smallest to largest:
 var sortingNumbers = [2, 5, 98, 55, 77, 300]
 // If it doesn't sort as expected, explain why.
 
 console.log("Bonus #1");
+
+sortingNumbers.sort();
+console.log(sortingNumbers);
 
 // BONUS 2: Transform array1 into array2 using as few lines of code as you can without directly changing the value of an item (ie array1[0] = item)
 var array1 = [2, 'dog', 34, 'Bill', 'plant', 'mug', 17];
@@ -192,3 +209,11 @@ var array1 = [2, 'dog', 34, 'Bill', 'plant', 'mug', 17];
 var array2 = ['plant', 17, 2, 'Bill', 'dog'];
 
 console.log("Bonus #2");
+array1.sort();
+console.log(array1);
+
+var array2;
+
+array2.splice(array1[4]);
+
+console.log(array2);
