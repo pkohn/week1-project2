@@ -65,9 +65,9 @@ console.log(wildthings);
 
 console.log("Question 8");
 
-var lastItem = things.pop();
-//lastItem.unshift('chopsticks');
-//lastItem.push('Soy');
+var lastItem = [things.pop()];
+lastItem.unshift('chopsticks');
+lastItem.push('Soy');
 console.log(lastItem);
 
 
@@ -77,7 +77,7 @@ console.log(lastItem);
 console.log("Question 9");
 
 var itemLast = lastItem.slice();
-lastItem.reverse;
+lastItem.reverse();
 console.log(lastItem);
  
 
@@ -85,12 +85,23 @@ console.log(lastItem);
 
 console.log("Question 10");
 
-//var freeitemLast = shift.itemLast;
+console.log(itemLast);
+var freeitemLast = itemLast.shift();
 console.log(itemLast);
 
 // 11. Remove all items from itemLast.
 
 console.log("Question 11");
+
+
+for (var count = 0; count <= itemLast.length; count++){
+	
+	itemLast.shift();
+	
+}
+
+console.log(itemLast);
+
 
 // 12. Using the Arrays below, create a single Array
 //     called numberPets whose value is [12, 5, 9, 27, 'fish', 'dog']
@@ -100,7 +111,7 @@ var firstArray = [12, 5, 9, 27];
 var secondArray = ['fish', 'dog'];
 
 var numberPets = firstArray.slice(); 
-//numberPets.splice(2, 0, secondArray);
+numberPets.splice(4, 0, secondArray[0], secondArray[1]);
 console.log(numberPets);
 
 
@@ -111,17 +122,41 @@ var people = ['Bill', 'Ted', 'Emily', 'Andrea', 'Doug'];
 
 console.log("Question 13");
 
+people.push("Philip");
+console.log(people);
+
+
 // 14. Remove everybody except 'Andrea' and 'Ted'
 
 console.log("Question 14");
+
+var people = ['Bill', 'Ted', 'Emily', 'Andrea', 'Doug'];
+
+for (var i = 0; i < people.length; ) {
+    var person = people[i];
+    if (person === 'Ted' || person === 'Andrea') {
+        i++;
+    } else {
+        people.splice(i,1);
+    }
+}
+
+console.log(people);
 
 // 15. Add a new person to the beginning of the Array
 
 console.log("Question 15");
 
+people.unshift("Liz");
+console.log(people);
+
 // 16. Arrange the items alphabetically. Store this Array as orderedPeople
 
 console.log("Question 15");
+var orderedPeople = people.sort();
+
+console.log(orderedPeople);
+
 
 // 17. Create an array of arrays with the following three arrays:
 var array1 = ["Fido", "Spot", "Rex", "Sparky"]
@@ -129,6 +164,10 @@ var array2 = ["Bulldog", "Lab", "Dalmation", "Beagle"]
 var array3 = ["White", "Black", "Spotted", "Tri-color"]
 
 console.log("Question 17");
+	
+var array4 = [array1, array2, array3];
+	console.log(array4);
+
 
 // Goal:
 var array4 = [
