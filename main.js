@@ -152,7 +152,7 @@ console.log(people);
 
 // 16. Arrange the items alphabetically. Store this Array as orderedPeople
 
-console.log("Question 15");
+console.log("Question 16");
 var orderedPeople = people.sort();
 
 console.log(orderedPeople);
@@ -209,11 +209,21 @@ var array1 = [2, 'dog', 34, 'Bill', 'plant', 'mug', 17];
 var array2 = ['plant', 17, 2, 'Bill', 'dog'];
 
 console.log("Bonus #2");
+
 array1.sort();
+
+//console.log(array1);
+
+var array3 = [];
+array3.unshift(array1.pop());
+array3.push(array1.shift());
+array3.push(array1.shift());
+array1.shift();
+array3.push(array1.shift());
+array3.push(array1.shift());
+array1=array3;
+
 console.log(array1);
-
-var array2;
-
-array2.splice(array1[4]);
-
 console.log(array2);
+console.log(array3);
+
