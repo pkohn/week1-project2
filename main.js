@@ -180,16 +180,8 @@ var array4 = [
 
 console.log("Question 18");
 
-for (var i = 0; i < array4.length;) {
-    var person = array4[i];
-    if (person === 'Sparky' || person === 'White') {
-        array4.splice(i,1);
-    } else {
-        i++;
-    }
-
-	console.log(array4);
-}
+array4[0].pop();
+array4[2].shift();
 
 console.log(array4);
 
